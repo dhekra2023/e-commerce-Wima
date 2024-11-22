@@ -1,17 +1,18 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Logout from './components/Logout'; 
 import Home from "./pages/Home";
 import Category from "./pages/Category";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
-import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <main className="bg-primary text-tertiary">
-      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,9 +24,10 @@ export default function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </Router>
     </main>
   );
 }
