@@ -8,13 +8,12 @@ import logout from '../assets/logout.svg';
 import user from '../assets/user.svg';
 
 const Header = () => {
-  const [menuOpened, setMenuOpened] = useState(true); 
+  const [menuOpened, setMenuOpened] = useState(false); 
   
   const toggleMenu = () => setMenuOpened(!menuOpened);
   
   return (
-    <header className="fixed top-0 left-0 m-auto
-    w-full bg-transparent bg-white ring-1 ring-slate-900/5 z-10">
+    <header className="fixed top-0 left-0 m-auto w-full bg-transparent bg-white ring-1 ring-slate-900/5 z-10">
       <div className="px-4 flexBetween py-3 max-w-[1440px] mx-auto">
         {/* logo */}
         <div>
@@ -32,15 +31,12 @@ const Header = () => {
         <div className="flexBetween sm:gap-x-2 bold-16">
           {!menuOpened ? (
             <MdMenu 
-              className="md:hidden cursor-pointer
-              hover:text-secondary mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8
-                rounded-full" 
+              className="md:hidden cursor-pointer hover:text-secondary mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8 rounded-full" 
               onClick={toggleMenu}/>
-              ) : (
-              <MdClose className="md:hidden cursor-pointer
-              hover:text-secondary mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8
-              rounded-full" 
-              onClick={toggleMenu}/>)}
+          ) : (
+            <MdClose className="md:hidden cursor-pointer hover:text-secondary mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8 rounded-full" 
+              onClick={toggleMenu}/>
+          )}
               <div className="flexBetween sm:gap-x-6"></div>
           <NavLink to={"/cart"} className={"flex"}><FaShoppingCart
             className="p-1 h-8 w-8 ring-slate-900/30 ring-1
