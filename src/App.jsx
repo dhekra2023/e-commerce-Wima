@@ -13,6 +13,8 @@ import bannerwomens from "./assets/bannerwomens.png";
 import bannerkids from "./assets/bannerkids.png";
 
 
+
+
 export default function App() {
   return (
     <main className="bg-primary text-tertiary">
@@ -22,16 +24,17 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/mens" element={<Category category="men" banner=
           {bannermens}/>} />
-          <Route path="/women" element={<Category category="women" banner=
+          <Route path="/womens" element={<Category category="women" banner=
           {bannerwomens}/>} />
           <Route path="/kids" element={<Category category="kid" banner=
           {bannerkids}/>} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/womens/product/:id" element={<Product />} />
           <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/logout" element={<Logout />} />
+          
         </Routes>
         <Footer />
       </Router>

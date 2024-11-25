@@ -51,7 +51,7 @@
 
 @layer utilities {
   .btn_white_rounded {
-    @apply medium-15 border-white bg-white px-7 py-3 text-gray-90 rounded-full;
+    @apply medium-15 border-white bg-white px-7 py-3 text-gray-900 rounded-full;
   }
   .btn_white_hover {
     @apply text-[14px] font-[500] border border-white bg-white px-7 py-2 text-gray-90 rounded-full hover:border-black hover:bg-black hover:text-white transition-all duration-300;
