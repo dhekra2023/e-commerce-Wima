@@ -34,9 +34,14 @@ import p33_img from './product_33.png';
 import p34_img from './product_34.png';
 import p35_img from './product_35.png';
 import p36_img from './product_36.png';
+import product_rt_1 from './product_rt_1.png';
+import product_rt_2 from './product_rt_2.png';
+import product_rt_3 from './product_rt_3.png';
+import product_rt_4 from './product_rt_4.png';
 
 
 let all_products = [
+    
     {
     id: 1,
     img: p1_img,
@@ -291,6 +296,34 @@ let all_products = [
         name: 'Product 36',
         category:"kid",
         new_price: 110.00,
+        old_price: 100.00,
+    },{
+        id: 37,
+        img: product_rt_1,
+        name: 'Product 37',
+        category:"womens",
+        new_price: 100.00,
+        old_price: 100.00,
+    },{
+        id: 38,
+        img: product_rt_2,
+        name: 'Product 38',
+        category:"womens",
+        new_price: 100.00,
+        old_price: 100.00,
+    },{
+        id: 39,
+        img: product_rt_3,
+        name: 'Product 39',
+        category:"womens",
+        new_price: 100.00,
+        old_price: 100.00,
+    },{
+        id: 40,
+        img: product_rt_4,
+        name: 'Product 40',
+        category:"womens",
+        new_price: 100.00,
         old_price: 100.00,
     }
 ]
